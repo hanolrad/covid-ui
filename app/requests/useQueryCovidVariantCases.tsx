@@ -10,7 +10,7 @@ interface VariantsDate {
 interface VariantShare {
   cumWeeklySequenced: number;
   newWeeklyPercentage: number;
-  variantName: string;
+  variant: string;
 }
 
 interface ApiCovidVariantsResponse {

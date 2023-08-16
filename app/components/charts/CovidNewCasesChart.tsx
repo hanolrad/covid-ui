@@ -26,11 +26,11 @@ const CovidNewCasesChart = () => {
       const chart = new Chart({
         container: chartRef.current,
         autoFit: false,
-        height: 200,
+        height: 300,
         width: 400,
       });
 
-      chart.interval().data(chartData).encode('x', 'date').encode('y', 'newCases').axis("x", { labelFontSize: 5, title: false }).axis("y", { labelFontSize: 10, title: false })
+      chart.interval().data(chartData).encode('x', 'date').encode('y', 'newCases').axis("x", { labelFontSize: 0, title: false }).axis("y", { labelFontSize: 10, title: false })
       chart.theme('light')
       chart.render();
     }
