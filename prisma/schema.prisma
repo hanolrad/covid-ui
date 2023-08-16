@@ -1,0 +1,15 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("postgresql://postgres:txLL11y8ZWxzETwO09Tb@containers-us-west-133.railway.app:6368/railway")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Chart {
+  id    Int    @id @default(autoincrement())
+  name  String
+  is_favorite Boolean
+  query_params Json
+}
