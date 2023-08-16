@@ -2,14 +2,14 @@
 
 import React, { useRef, useEffect } from 'react';
 import { Chart } from '@antv/g2';
-import { useCovidCases } from '../../requests/useCovidCases';
+import { useQueryCovidNewCases } from '@/app/requests/useQueryCovidNewCases';
 
-const CovidCasesChart = () => {
+const CovidNewCasesChart = () => {
   const chartRef = useRef<HTMLDivElement>(null);
-  const { data, isLoading, isError } = useCovidCases();
+  const { data, isLoading, isError } = useQueryCovidNewCases();
 
   // Format the data for the chart.
-  const chartData = data?.data.filter((d, i) => i < 10).map((caseData) => ({
+  const chartData = data?.data.filter((d, i) => i < 14).map((caseData) => ({
     date: caseData.date,
     newCases: caseData.newCases,
   }));
@@ -47,4 +47,4 @@ const CovidCasesChart = () => {
   return <div><div ref={chartRef}></div></div>
 };
 
-export default CovidCasesChart;
+export default CovidNewCasesChart;
