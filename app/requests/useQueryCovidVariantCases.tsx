@@ -40,7 +40,6 @@ export const fetchCovidVariantsCases: QueryFn = async () => {
         params: variantCasesParams,
       },
     );
-    console.log("variant cases data:", response.data);
     return response.data;
   } catch (error) {
     throw new Error("Error fetching COVID-19 data.");

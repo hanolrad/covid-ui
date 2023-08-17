@@ -17,13 +17,13 @@ const ChartCard: FC<{ title: string; children: React.ReactElement }> = ({
           shape="circle"
           alt="Avatar"
         />
-        <div className="flex space-x-4 align-middle">
+        <div className="flex space-x-4 align-middle text-blue-500">
           <HeartOutlined style={{ fontSize: 25, cursor: "pointer" }} />
           {/* <HeartFilled style={{fontSize: 25 }} /> */}
-          <span className="justify-around align-middle cursor-pointer text-base font-bold">
+          <div className="flex justify-around align-middle cursor-pointer text-blue-500 space-x-0.5">
             <MessageOutlined style={{ fontSize: 25 }} />
-            {12}
-          </span>
+            <span className="text-xs">{12}</span>
+          </div>
         </div>
       </div>
     </Card>

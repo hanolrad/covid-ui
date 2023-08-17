@@ -4,16 +4,34 @@ import { EditOutlined, CopyOutlined, FilterOutlined } from "@ant-design/icons";
 
 const PageHeaderWithActions: FC<{ title: string }> = ({ title }) => {
   return (
-    <div className="flex justify-between mb-4">
-      <div className="flex justify-start">{title}</div>
+    <div className="flex justify-between min-w-full mb-4">
+      <div className="flex justify-start font-medium">{title}</div>
       <div className="flex space-x-4">
-        <Button type="default" className="align-middle" icon={<EditOutlined />}>
+        <Button
+          type="primary"
+          className="bg-white text-blue-500 hover:text-white"
+          icon={
+            <EditOutlined className="flex text-current align-middle relative top-0.5" />
+          }
+        >
           Notes
         </Button>
-        <Button type="default" icon={<CopyOutlined />}>
+        <Button
+          type="primary"
+          className="bg-white text-blue-500 hover:text-white"
+          icon={
+            <CopyOutlined className="flex text-current align-middle relative top-0.5" />
+          }
+        >
           Export
         </Button>
-        <Button type="default" icon={<FilterOutlined />}>
+        <Button
+          type="primary"
+          className="bg-white text-blue-500 hover:text-white"
+          icon={
+            <FilterOutlined className="flex text-current align-middle relative top-0.5" />
+          }
+        >
           Filter
         </Button>
       </div>

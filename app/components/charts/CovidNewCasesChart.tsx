@@ -17,10 +17,7 @@ const CovidNewCasesChart = () => {
     }));
 
   useEffect(() => {
-    console.log("chartData", chartData);
     if (chartRef.current && chartData) {
-      console.log("chartRef.current exists", chartRef.current);
-
       // remove previous chart instance
       while (chartRef.current.firstChild) {
         chartRef.current.removeChild(chartRef.current.firstChild);

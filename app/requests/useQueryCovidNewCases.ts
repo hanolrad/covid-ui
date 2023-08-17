@@ -34,7 +34,6 @@ export const fetchNewCovidCases: QueryFn = async () => {
         params: apiCovidNewCasesParams,
       },
     );
-    console.log("new covid cases data:", response.data);
     return response.data;
   } catch (error) {
     throw new Error("Error fetching COVID-19 data.");
